@@ -30,62 +30,29 @@
             bottom: 0;
             width: 100%;
         }
-        .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-        .sidenav a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 22px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-        .sidenav a:hover {
-            color: #f1f1f1;
-        }
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-        .openbtn {
-            font-size: 20px;
-            cursor: pointer;
-            background-color: #111;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-        }
-        .openbtn:hover {
-            background-color: #444;
-        }
     </style>
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="dashboard.html">The fun stuff</a>
-    <a href="#">Establishment</a>
-    <a href="#">Vacancies</a>
-    <a href="#">Data Load</a>
-    <a href="#">Reference Data</a>
-    <a href="#">Administration</a>
-</div>
-
-<button class="openbtn" onclick="openNav()">☰ Open Side Navigation</button>
+<!-- Top Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home Page</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                <a class="nav-link" href="#">Establishment</a>
+                <a class="nav-link" href="#">Vacancies</a>
+                <a class="nav-link" href="#">Data Load</a>
+                <a class="nav-link" href="#">Reference Data</a>
+                <a class="nav-link" href="#">Administration</a>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <header>
     <h1>Welcome to Our HomePage</h1>
@@ -124,7 +91,7 @@
                     Section 3: File Upload
                 </button>
             </h2>
-            <div id="collapseThree" the accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#uploadAccordion">
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#uploadAccordion">
                 <div class="accordion-body">
                     <input type="file" class="form-control">
                 </div>
@@ -151,15 +118,6 @@
 
 <!-- Bootstrap JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-</script>
 
 </body>
 </html>
